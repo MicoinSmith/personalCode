@@ -1,0 +1,407 @@
+
+/*继承支付部分*/
+#gift_font{
+  /*background: #1c1e23;*/
+  border-bottom: 3px solid #6bb56f;
+  -webkit-box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  -webkit-transform: translate3d(0, -2px, 0);
+  transform: translate3d(0, -2px, 0);
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+
+
+
+
+/*register start*/
+.register_box{
+  width: 360px;
+  height: 400px;
+  background: #4a4a4a;
+  margin-left: 50%;
+  left: -180px;
+  margin-top: 200px;
+  position: absolute;
+  text-align: center;
+  border: 1px solid #c0c0c0;
+  border-radius: 15px;
+}
+.register_title{
+  margin-top: 20px;
+  font-size: 22px;
+  font-family: "microsoft yahei";
+  color: #ddd;
+  font-weight: 500;
+}
+.register_title_p{
+  font-size: 14px;
+  width: 320px;
+  margin: 20px auto;
+  text-align: left;
+}
+.register_input_box{
+  width: 320px;
+  height: 30px;
+  margin: auto;
+  background: #fff;
+  border: 2px solid #c0c0c0;
+  border-radius: 10px;
+}
+.register_input{
+  width: 304px;
+  height: 20px;
+  margin-top: 5px;
+  border: 0px;
+  font-family: "microsoft yahei";
+  font-weight: 400;
+  color: #969696;
+}
+.register_input:focus{
+  outline: medium;
+  color: #1c1c1c;
+}
+.register_agreement{
+  color: gray;
+  font-size: 14px;
+  font-family: "microsoft yahei";
+  font-weight: 400;
+  margin: 30px auto;
+}
+.register_agreement span{
+  margin-left: -20px;
+}
+.color_agreement{
+  color: #6bb56f;
+  display: inline-block;
+}
+.register_button{
+  margin-top: -15px;
+  width: 300px;
+  height: 35px;
+  border-radius: 15px;
+  background: #fff;
+  font-family: "microsoft yahei";
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  outline: medium;
+}
+/*=====================================================*/
+/*article start*/
+/*section start*/
+
+.section{
+  width: 100%;
+  height: 950px;
+  padding-top: 50px;
+  background: #2B2C30;
+}
+
+.width890{
+  width: 890px;
+  margin: auto;
+  /*background: #b0b0b0;*/
+  border-radius: 15px;
+  /*border: 2px solid #c0c0c0;*/
+}
+.order_experience{
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  color: #ddd;
+  font-size: 24px;
+  font-family: "microsoft yehei";
+  font-weight: 600;
+}
+.commodity{
+  margin-top: 30px;
+  height: 460px;
+}
+.commodity_box{
+  float: left;
+  margin: auto;
+  margin-left: 25px;
+  width: 400px;
+  height: 300px;
+  text-align: center;
+}
+.clothes{
+  margin-top: 20px;
+  color: #fff;
+  padding-bottom: 30px;
+}
+.commodity_box img{
+  height: 300px;
+  display: block;
+  margin: auto;
+}
+/*.commodity_box>input{
+  text-align: center;
+  width: 50px;
+  height: 30px;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: -50px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+-webkit-appearance: none !important;
+margin: 0;
+}*/
+.price{
+  display: block;
+  font-family: "microsoft yahei";
+  font-size: 18px;
+  color: #6bb56f;
+  position: absolute;
+  margin-left: 180px;
+  margin-top: 25px;
+}
+.num_changebox_a,.num_changebox_b{
+  width: 152px;
+  /*height: 430px;*/
+  margin-top: 65px;
+  margin-left: 120px;
+
+}
+.num_change_a,.num_change_b{
+  text-align: center;
+  float: left;
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+  border: none;
+  border-left: 1px solid #2B2C30;
+  border-right: 1px solid #2B2C30;
+  outline: none;
+}
+.reduce_a,.reduce_b,.add_a,.add_b{
+  float: left;
+  width: 50px;
+  height: 30px;
+  border: none;
+  font-size: 22px;
+  font-family: "microsoft yahei";
+  background: #fff;
+  line-height: 30px;
+  cursor: pointer;
+  outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+/*-------------------------------------*/
+.customer_information{
+  margin: auto;
+  width:680px;
+  height: 335px;
+}
+.customer_information input{
+  margin: auto;
+  width: 245px;
+  background: #fff;
+  /*border-radius: 15px;*/
+  height: 45px;
+  margin-top: 50px;
+  outline-style: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 18px;
+  /*color: gray;*/
+}
+#customer_name{
+  margin-left: 40px;
+  width: 180px;
+}
+#customer_addr{
+  width: 580px;
+  margin-left: 40px;
+  display: block;
+}
+#customer_tel{
+  width: 320px;
+  margin-left: 62px;
+  outline-style: none;
+}
+#by_sure{
+  margin-left: 460px;
+  margin-top: 50px;
+  background: #9b9ca4;
+  border: 0;
+  height: 45px;
+  width: 160px;
+  font-size: 20px;
+  color: #fff;
+}
+/*-------------------------*/
+._border_{
+  border-top: 1px dashed #b0b0b0;
+  height: 1px;
+  width: 580px;
+  margin: auto;
+  margin-left: 145px;
+}
+/*--------------------------------------*/
+.should_knows{
+  font-size: 16px;
+  color: #ddd;
+  font-family: "microsoft yahei";
+  margin-top: 13px;
+  margin-left: 145px;
+  font-weight: 400;
+}
+.should_knows p{
+  margin-top: 30px;
+  line-height: 30px;
+}
+/*----------------------------------------------*/
+/*-----------------确认购买弹框------------------*/
+.sure_by_box{
+  width: 720px;
+  height: 816px;
+  position: absolute;
+  top: 13%;
+  margin-left: -360px;
+  left: 50%;
+  background: #2B2C30;
+  border: 1px solid #ddd;
+  display: none;
+}
+.sure_top{
+  width: 700px;
+  height: 110px;
+  border-bottom: 1px dashed #ddd;
+  margin: auto;
+}
+.sure_top span,.sure_by_box_botton{
+  width: 200px;
+  float: left;
+  height: 35px;
+  margin-top: 30px;
+  color: #fff;
+  font-family: "microsoft yahei";
+  font-size: 26px;
+  text-align: center;
+  background: none;
+  border: none;
+}
+.sure_by_box_botton{
+  outline: none;
+  cursor: pointer;
+}
+.sure_by_box_botton:hover{
+  height: 55px;
+  border: 1px solid #ddd;
+  margin-top: 23px;
+  color: #6bb56f;
+}
+.sure_top span:nth-child(2){
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.sure_middle{
+  width: 100%;
+  /*border: 1px dashed #ddd;*/
+  border-bottom: 1px dashed #ddd;
+  height: 500px;
+}
+.sure_middle p{
+  margin-left: 30px;
+  margin-top: 50px;
+  font-family: "microsoft yahei";
+  font-size: 24px;
+  color: #fff;
+}
+.sure_pay_it{
+  width: 160px;
+  height: 60px;
+  float: right;
+  margin-top: 40px;
+  margin-right: 35px;
+  background: none;
+  color: #fff;
+  font-size: 30px;
+  font-family: "microsoft yahei";
+  cursor: pointer;
+  border: none;
+}
+.total{
+  color: #6bb56f;
+  font-size: 35px;
+  margin-left: 65px;
+  float: left;
+  margin-top: 47px;
+  font-family: "microsoft yahei";
+}
+.sure_pay_it:hover{
+  color: #6bb56f;
+  border: 1px solid #ddd;
+}
+/*=====================================================*/
+.pay4way{
+  width: 600px;
+  height: 380px;
+  margin: auto;
+  /*border: 1px solid #ddd;*/
+}
+.pay4way div{
+  margin-top: 65px;
+  height: 90px;
+}
+.pay4way div img{
+  float: left;
+  width: 160px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.pay_point{
+  display: none;
+}
+#pay_zhifubao{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 25px;
+  border: 1px solid #2B2C30;
+}
+#pay_weixin{
+  width: 180px;
+  margin-left: 40px;
+  margin-top: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #2B2C30;
+}
+#pay_jingdong{
+  margin-left: 40px;
+  margin-top: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 1px solid #2B2C30;
+}
+#pay_baiduqianbao{
+  margin-left: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #2B2C30;
+}
+#pay_zhongguoyinlian{
+  width: 180px;
+  margin-left: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #2B2C30;
+}
+.pay_div_hidden{
+  width: 720px;
+  height: 135px;
+  background: #2B2C30;
+  margin-top: 180PX;
+  display: none;
+}
+/*register stop*/
+/*section stop*/
+/*article部分stop*/

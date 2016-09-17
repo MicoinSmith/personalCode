@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="author" contect="xumingze,xmz1204631791@gmail.com" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+    <!-- <meta http-equiv="refresh" content="10"> -->
+    <!-- <meta http-equiv="refresh" content="35"> -->
+
+    <title></title>
+    <!-- <link rel="stylesheet" href="../css/reset.css" media="screen" title="no title" charset="utf-8"> -->
+    <link rel="stylesheet" href="../css/weixin_giftcenter.css" media="screen" title="no title" charset="utf-8">
+    <script src="../js\jquery-3.1.0.js" charset="utf-8"></script>
+    <script src="../js\jquery.validate.min.js" charset="utf-8"></script>
+    <script src="../js\weixin_giftcenter.js" charset="utf-8"></script>
+  </head>
+
+  <body>
+    <section id="main_page"class="main_page">
+      <article id="main_header"class="main_header">
+        <img src="../images\index_logo.png" alt=""/>
+        <span id="title_center"class="title_center">礼品中心</span>
+      </article>
+      <article id="main_body"class="main_body">
+        <div class="main_body_box">
+          <div class="commodity_a">
+            <img src="../images\gift_a.png" alt="" />
+            <div class="inform">
+              <p>¥58/件</p>
+              <div class="size_choose">
+                <!-- <div id="size_point_a"class="size_point_a" style="display:none">0</div> -->
+                <span id="size_s_a"class="size_s_a" onclick="click_size_s_a()">S</span>
+                <span id="size_m_a"class="size_m_a" onclick="click_size_m_a()">M</span>
+                <span id="size_l_a"class="size_l_a" onclick="click_size_l_a()">L</span>
+                <span id="size_xl_a"class="size_xl_a" onclick="click_size_xl_a()">XL</span>
+                <span id="size_xxl_a"class="size_xxl_a" onclick="click_size_xxl_a()">XL</span>
+              </div>
+              <button id="reduce_a" class="reduce_a" onclick="click_reduce_a()">-</button>
+              <input id="change_a" class="num_change_a" type="number" name="num_change_a" value="0">
+              <button id="add_a" class="add_a" onclick="click_add_a()">+</button>
+            </div>
+          </div>
+          <div class="commodity_b">
+            <img src="../images\gift_b.png" alt=""/>
+            <div class="inform">
+              <p>¥88/件</p>
+              <div class="size_choose">
+                <!-- <div id="size_point_b"class="size_point_b" style="display:none">0</div> -->
+                <span id="size_s_b"class="size_s_b" onclick="click_size_s_b()">S</span>
+                <span id="size_m_b"class="size_m_b" onclick="click_size_m_b()">M</span>
+                <span id="size_l_b"class="size_l_b" onclick="click_size_l_b()">L</span>
+                <span id="size_xl_b"class="size_xl_" onclick="click_size_xl_b()">XL</span>
+                <span id="size_xxl_b"class="size_xxl_b" onclick="click_size_xxl_b()">XL</span>
+              </div>
+              <button id="reduce_b" class="reduce_b" onclick="click_reduce_b()">-</button>
+              <input id="change_b" class="num_change_b" type="number" name="num_change_b" value="0">
+              <button id="add_b" class="add_b" onclick="click_add_b()">+</button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article id="main_foot"class="main_foot">
+        <input id="total" class="total"type="button" name="name" value="合计：¥ 0   下一步">
+      </article>
+    </section>
+
+    <section id="next_page" class="next_page">
+      <article id="next_top"class="next_top">
+        <input id="goback" class="goback" type="button" name="name" value="返       回">
+      </article>
+      <article id="next_body"class="next_body">
+
+        <form id="customer_information"class="customer_information" action="#" onsubmit="return saveMessage()">
+
+          <input id="customer_name" class="customer_name required" type="name" required name="customer_name" placeholder="请输入您的姓名">
+          <input id="customer_tel" class="customer_tel"type="text"  required name="customer_tel" pattern="(\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$" placeholder="请输入您的电话号码">
+          <input id="customer_addr" class="customer_addr"type="text"  required name="customer_addr" placeholder="请输入您的收货地址">
+          <input id="by_sure" class="by_sure" type="submit" name="button" value="提交订单">
+
+        </form>
+
+      </article>
+      <article id="next_foot"class="next_foot">
+        <div class="should_knows">
+          <div class=""><x></x>
+            <span>1、</span><p>礼品邮寄地址需用中文完整填写：收件人姓名、电话、e-mail、收货地址（确保真实有效）、邮编。</p>
+          </div>
+          <div class="">
+            <span>2、</span><p>礼品的发送只限于中国大陆地区。</p>
+          </div>
+          <div class="">
+            <span>3、</span><p>礼品一般在提交申请后一周内寄出，如遇到节假日或缺货情况，邮寄配送将相应延期。</p>
+          </div>
+          <div class="">
+            <span>4、</span><p>礼品自发送之日起，十五个工作日内仍未收到的，请及时联系我们。</p>
+          </div>
+        </div>
+
+      </article>
+    </section>
+
+    <section id="pay_div_hidden"class="pay_div_hidden">
+      <div class="pageThree">
+        <p id="choose_p">请选择支付方式：</p>
+        <article id="paytheway"class="paytheway">
+          <div id="pay4way" class="pay4way">
+            <p id="pay_point" class="pay_point" style="display:none;">0</p>
+            <div class="pay_block">
+              <img onclick="click_zhifubao()" id="pay_zhifubao" class="pay_zhifubao" src="../images/zhifubao.png" alt="">
+              <img onclick="click_weixin()" id="pay_weixin" class="pay_weixin" src="../images/weixin.png" alt="">
+              <img onclick="click_jingdong()" id="pay_jingdong" class="pay_jingdong" src="../images/jingdongzhifu.png" alt="">
+              <img onclick="click_zhongguoyinlian()" id="pay_zhongguoyinlian" class="payzhongguoyinlian" src="../images/zhongguoyinlian.png" alt="">
+              <img onclick="click_baiduqianbao()" id="pay_baiduqianbao" class="pay_baiduqianbao" src="../images/baiduqianbao.png" alt="">
+            </div>
+          </div>
+          <div class="sure_bottom">
+            <button id="sure_pay_it" class="sure_pay_it" onclick="sure_pay_it" type="button" name="button">付 款</button>
+            <button id="back" class="sure_by_box_botton">返 回</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </body>
+</html>
+    <!-- <section id="main_page"class="main_page">
+      <div class="article">
+        <div class="experience">
+          <img src="../images\shopping.svg" alt="" />
+          <p>礼品订单</p>
+          <div class="clothes">
+            <img src="../images\gift_a.png" alt="">
+          </div>
+          <span>商品：T恤</span>
+          <span>金额：¥ 0.1</span>
+          <p class="notice">注意：仅为demo，无实际交易发生</p>
+          <p>1、礼品邮寄地址需用中文完整填写：收件人姓名、电话、e-mail、收货地址（确保真实有效）、</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp邮编。</p>
+          <p>2、礼品的发送只限于中国大陆地区。</p>
+          <p>3、礼品一般在提交申请后一周内寄出，如遇到节假日或缺货情况，邮寄配送将相应延期。</p>
+          <p>4、礼品自发送之日起，十五个工作日内仍未收到的，请及时联系我们。</p>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="experience_button">
+          <button type="button" name="button" onclick="choose_page()">支付&nbsp;¥0.1&nbsp;体验 Paying</button>
+        </div>
+      </div>
+      <div id="shadow" class="shadow" onclick="shadow_back()"></div>
+      <div id="pay_box"class="pay_box">
+        <div id="weixinpay"class="weixinpay">
+          <img src="../images\微信支付.svg" alt="" /><span class="pay_img_font">微信支付</span>
+        </div>
+        <div id="zhifubaopay"class="zhifubaopay">
+          <img src="../images\支付宝.svg" alt="" /><span class="pay_img_font">支付宝支付</span>
+        </div>
+        <div id="yinlianpay"class="yinlianpay">
+          <img src="../images\银联.svg" alt="" /><span class="pay_img_font">中国银联</span>
+        </div>
+        <div id="jingdongpay"class="jingdongpay">
+          <img src="../images\京东.svg" alt="" /><span class="pay_img_font">京东支付</span>
+        </div>
+        <div id="baiduqianbao"class="baiduqianbao">
+          <img src="../images\百度钱包.svg" alt="" /><span class="pay_img_font">百度钱包</span>
+        </div>
+        <p>Paying Inside</p>
+      </div>
+    </section> -->

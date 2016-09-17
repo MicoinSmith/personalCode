@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>BeeCloud让支付更简单</title>
+    <link rel="stylesheet" href="css/wechat_gift_center.css" type="text/css">
+    <script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/js/wechat_gift_center.js"></script>
+    <script>
+        window.openid = "";
+        window.wxInfo = '{"errcode":41001,"errmsg":"access_token missing, hints: [ req_id: rXSGfa0117ns56 ]"}';
+        window.ShareUrl = "http://wxactivity.beecloud.cn/activity/index.php?isshare=true";
+
+        if(!localStorage.getItem("openid") || !localStorage.getItem("userInfo")){
+            localStorage.setItem("openid",'');
+            localStorage.setItem("userInfo",'{"errcode":41001,"errmsg":"access_token missing, hints: [ req_id: rXSGfa0117ns56 ]"}');
+        }
+        window.openid = localStorage.getItem("openid");
+        window.wxInfo = localStorage.getItem("userInfo");
+
+    </script>
+</head>
+
+<body>
+
+<section class="page1" style="display: none;">
+            <div class="pro_info" style="background-color: #6290de; padding: 15% 30px">
+            <p><span style="font-size: 20px;">我在</span><br>MDCC大会<br><span>体验BeeCloud支付</span></p>
+        </div>
+        <div class="btn">你也来试试吧！<br><button>体验 BeeCloud 支付</button></div>
+    </section>
+
+<section class="page1 page2" style="display: block; height: auto;">
+    <!--        <p class="share_t">-->
+<!--            <b>Bee<span>Cloud</span></b><br>-->
+<!--            几分钟几行代码<br>-->
+<!--            接入主流支付方式-->
+<!--        </p>-->
+
+
+        <div class="title" style="padding-top: 30px;">
+            <img src="resource/img/logo2.png">
+            <h3>一站式支付解决方案</h3>
+            <img class="img2" src="resource/img/page1_con2.png">
+        </div>
+        <div class="pro_info" style=" margin: 10% 40px; padding: 7% 25px;">
+            <dl>
+                <dt><i></i>体验订单</dt>
+                <dd><span>商品</span>BeeCloud支付体验</dd>
+                <dd><span>金额</span>¥ 0.01</dd>
+            </dl>
+        </div>
+        <div class="btn" style="padding: 0 40px 50px;"><button data-fee="1">支付&nbsp;¥0.01&nbsp;体验BeeCloud</button></div>
+    </section>
+
+<section class="page3">
+    <div class="pro_info">
+        <dl>
+            <dt><i></i>支付成功</dt>
+        </dl>
+    </div>
+<!--    <div class="btn share_btn" style="padding: 0 40px;"><button>分享朋友圈</button></div>-->
+    <div class="btn share_btn" style="padding: 0 40px;"><button>分享朋友圈</button></div>
+<!--    <div class="btn about_us" style="padding: 0 40px;"><button>了解我们</button></div>-->
+    <a href="https://beecloud.cn">beecloud.cn</a>
+</section>
+
+<div class="popup" style="display: block;"></div>
+<div class="payList" style="display: block; bottom: -52px;">
+    <ul>
+        <li data-val="WX_JSAPI"><i></i><span>微信支付</span></li>
+        <li data-val="ALI_WAP"><i></i><span>支付宝支付</span></li>
+        <li data-val="UN_WEB"><i></i><span>银联支付</span></li>
+        <li data-val="JD_WAP"><i></i><span>京东支付</span></li>
+        <li data-val="BD_WAP"><i></i><span>百度钱包</span></li>
+<!--        <li data-val="KUAIQIAN_WAP"><i></i><span>快钱支付</span></li>-->
+
+<!--        <li><i></i><span>易宝支付</span></li>-->
+    </ul>
+    <p>由BeeCloud提供快捷的支付体验</p>
+</div>
+
+<script type="text/javascript" src="/js/t-shirt.js?v=33"></script>
+<script type="text/javascript" src="/js/weixin-1.0.0.js"></script>
+<script>
+    var callWXShare = function(){
+        wx.config({
+            debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+            appId: 'wx419f04c4a731303d', // 必填，公众号的唯一标识
+            timestamp: 1469013117, // 必填，生成签名的时间戳
+            nonceStr: 'beecloud', // 必填，生成签名的随机串
+            signature: 'b2e6066f78b2a6dfd97ca8b105fa54d95e6de7e7',// 必填，签名，见附录1
+            jsApiList: ["onMenuShareTimeline", "onMenuShareAppMessage"] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+        });
+        wx.ready(function(){
+            //JSON.stringify(wx);
+            wx.onMenuShareAppMessage({
+//                trigger: function (res) {
+//                    alert(ShareUrl + '用户点击发送给朋友');
+//                },
+//                success: function (res) {
+//                    alert('已分享');
+//                },
+//                cancel: function (res) {
+//                    alert('已取消');
+//                },
+//                fail: function (res) {
+//                    alert("fail" + JSON.stringify(res));
+//                },
+                title: 'BeeCloud让支付更简单', // 分享标题
+                desc: '我正在体验BeeCloud支付，你也来试试吧', // 分享描述  赶紧来测测你的人际值多少月饼吧！
+                link: ShareUrl, // 分享链接
+                imgUrl: 'http://wxactivity.beecloud.cn/activity/resource/img/share.png' // 分享图标
+            });
+
+            wx.onMenuShareTimeline({
+//                trigger: function (res) {
+//                    alert(ShareUrl + '用户点击发送给朋友');
+//                },
+//                success: function (res) {
+//                    alert('已分享');
+//                },
+//                cancel: function (res) {
+//                    alert('已取消');
+//                },
+//                fail: function (res) {
+//                    alert(JSON.stringify(res));
+//                },
+                title: '我正在体验BeeCloud支付，你也来试试吧!', // 分享标题
+                desc: '我正在体验BeeCloud支付，你也来试试吧!',
+                link: ShareUrl, // 分享链接
+                imgUrl: 'http://wxactivity.beecloud.cn/activity/resource/img/share.png' // 分享图标
+            });
+        });
+
+    }
+
+    if (typeof WeixinJSBridge == "undefined"){
+        if( document.addEventListener ){
+            document.addEventListener('WeixinJSBridgeReady', callWXShare, false);
+        }else if (document.attachEvent){
+            document.attachEvent('WeixinJSBridgeReady', callWXShare);
+            document.attachEvent('onWeixinJSBridgeReady', callWXShare);
+        }
+    }else{
+        callWXShare();
+    }
+
+
+</script>
+
+
+</body>
+</html>

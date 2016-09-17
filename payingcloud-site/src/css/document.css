@@ -1,0 +1,28 @@
+/*继承支付部分*/
+#document_font{
+  /*background: #1c1e23;*/
+  border-bottom: 3px solid #6bb56f;
+  -webkit-box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  -webkit-transform: translate3d(0, -2px, 0);
+  transform: translate3d(0, -2px, 0);
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+.section{
+  height: 600px;
+  background: #2b2c30;
+  /*overflow: hidden;*/
+}
+.dommint_soon{
+  width: 40%;
+  height: 300px;
+  color: #ddd;
+  font-family: "microsoft yahei";
+  font-size: 22px;
+  margin: auto;
+  overflow: hidden;
+}
+.dommint_soon p{
+  margin-top: 180px;
+}

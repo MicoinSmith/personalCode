@@ -1,0 +1,122 @@
+
+/*header部分start*/
+
+/*继承支付部分*/
+#register_font{
+  /*background: #1c1e23;*/
+  border-bottom: 3px solid #6bb56f;
+  -webkit-box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  -webkit-transform: translate3d(0, -2px, 0);
+  transform: translate3d(0, -2px, 0);
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+/*header部分stop*/
+/*section start*/
+.section{
+  width: 100%;
+  height: 960px;
+  background: #2B2C30;
+}
+/*register start*/
+.register_box{
+  width: 360px;
+  height: 360px;
+  background: #4a4a4a;
+  margin-left: 50%;
+  left: -180px;
+  margin-top: 200px;
+  position: absolute;
+  text-align: center;
+  border: 1px solid #c0c0c0;
+  border-radius: 15px;
+}
+.register_title{
+  margin-top: 20px;
+  font-size: 22px;
+  font-family: "microsoft yahei";
+  color: #ddd;
+  font-weight: 500;
+}
+.register_title_p{
+  font-size: 16px;
+  width: 320px;
+  margin: 30px auto;
+  text-align: left;
+}
+.register_input_box{
+  width: 320px;
+  height: 35px;
+  margin: auto;
+  background: #fff;
+  /*border: 2px solid #c0c0c0;*/
+  /*border-radius: 10px;*/
+}
+.register_input{
+  width: 304px;
+  height: 20px;
+  margin-top: 7px;
+  border: 0px;
+  font-family: "microsoft yahei";
+  font-weight: 400;
+  text-align: center;
+  color: #969696;
+  font-size: 16px;
+}
+.register_input:focus{
+  outline: medium;
+  color: #1c1c1c;
+}
+.register_agreement{
+  color: gray;
+  font-size: 14px;
+  font-family: "microsoft yahei";
+  font-weight: 400;
+  margin: 30px auto;
+}
+.register_agreement span{
+  margin-left: -20px;
+}
+.checkbox{
+  float: left;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid #c0c0c0;
+  background: #fff;
+  margin-left: 20px;
+}
+.color_agreement{
+  color: #6bb56f;
+  display: inline-block;
+}
+.register_button{
+  width: 320px;
+  height: 35px;
+  /*border-radius: 15px  qq11111111111111;*/
+  background: #fff;
+  font-family: "microsoft yahei";
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  outline: medium;
+  border: none;
+  cursor: pointer;
+}
+/*
+.hava_a_try{
+  width: 300px;
+  height: 20px;
+  background: green;
+}
+
+*/
+
+
+
+/*register stop*/
+
+/*section stop*/
+/*article部分stop*/
