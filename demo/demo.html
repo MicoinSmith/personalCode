@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>演示</title>
+<link rel="stylesheet" href="reset.css">
+<style>
+	div{
+		/*text-align: center;*/
+	}
+	div ul{ 
+		overflow: hidden; 
+		padding-left: 3rem;
+	}
+	div ul li{
+		float: left;
+		/*display: inline-blo;*/
+	}
+	div ul li:first-of-type,
+	div ul li:last-of-type{
+		line-height: 7.1rem;
+	}
+	div ul li dl{
+		/*display: inline-block;*/
+		margin: 0 .6rem;
+		margin-top: 1.08rem;
+		text-align: center;
+	}
+	div ul li dl dt{
+		/*display: inline-block;*/
+		width:4.45rem;
+		height:4.45 rem;
+		background: yellow;
+		text-align: center; 
+		line-height: 4.45rem;
+		border-radius: 50%;
+	}
+	div ul li dl dd{
+		margin-top: 0.2rem;
+	}
+</style>
+<script>
+	//动态调整rem值,除以50
+	function setsize() {
+	  var winW = document.documentElement.clientWidth,
+	  	  winH = document.documentElement.clientHeight,
+		  baseFontSize = 50,
+		  baseWidth = 750,
+		  winWidthSize = Math.min(winW, winH);
+	  if (winWidthSize > 560) {
+		winWidthSize = 560;
+	  }
+	  if (winWidthSize < 270) {
+		winWidthSize = 270;
+	  }
+	  var _html = document.getElementsByTagName('html')[0];
+	  _html.style.fontSize =winWidthSize / baseWidth * baseFontSize + 'px';
+	}
+	setsize();
+</script>	
+
+</head>
+
+<body>
+	<div style="background: red; height: 7.16rem;font-size:0.6rem;">
+		<ul>
+			<li>
+				文件夹
+			</li>
+			<li>
+				<dl>
+					<dt style="">
+						<p>
+							图片
+						</p>
+					</dt>
+					<dd>
+						这是一个图片
+					</dd>
+				</dl>
+			</li>
+			<li>
+				设置的图
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
